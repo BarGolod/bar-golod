@@ -1,0 +1,44 @@
+<footer class="footer">
+  <div class="footer-content">
+    <div class="logo">Bar <span class="thin">Golod.</span></div>
+    <div class="sections">
+      <div class="footer-section" *ngFor="let section of sections">
+        <h3 class="section-title">{{ section.title }}</h3>
+        <ul class="link-list">
+          <li
+            [ngClass]="item.type"
+            *ngFor="let item of section.items; let itemIndex = index"
+          >
+            <ng-container *ngIf="item?.routerLink; else noRouterLink">
+              <!-- <a [routerLink]="item?.routerLink">{{ item.text }}</a> -->
+              <span (click)="openLegalDialog(item.routerLink)">{{
+                item.text
+              }}</span>
+            </ng-container>
+            <ng-template #noRouterLink>
+              <span (click)="item.action()">{{ item.text }}</span>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="footer-bottom">
+    <div class="social-links">
+      <app-social-links></app-social-links>
+    </div>
+    <div class="footer-bottom-content">
+      <div class="footer-bottom-left">
+        <div class="footer-bottom-text">
+          © {{ getCurrentYear() }} Bar Golod. All rights reserved.
+        </div>
+      </div>
+      <div class="footer-bottom-right">
+        <div class="footer-bottom-text">
+          Developed & Designed by Bar Golod - Angular 14.1.0
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

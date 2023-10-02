@@ -1,0 +1,41 @@
+@import "./../../../assets/main.scss";
+@import "./../../../assets/variables.scss";
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 1rem;
+  z-index: 1000;
+
+  i {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-accent;
+    font-size: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .scroll-to-top-button {
+    bottom: 4.5rem;
+
+    i {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+    }
+  }
+}

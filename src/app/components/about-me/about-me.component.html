@@ -1,0 +1,42 @@
+<div class="about-me">
+  <div class="about-me-container">
+    <div class="title-container">
+      <div class="about-me-title">
+        <h1>About <span class="primary-text">Me</span></h1>
+      </div>
+      <div class="title-underline"></div>
+    </div>
+    <div class="title-container title">
+      <app-social-links></app-social-links>
+    </div>
+    <div class="content-wrapper">
+      <div class="about-me-text">
+        <div class="about-me-text-container">
+          <div class="left-content">
+            <div class="about-me-image">
+              <img
+                class="about-me-image"
+                src="/assets/img/bar-image.webp"
+                alt="Bar's picture"
+              />
+            </div>
+          </div>
+          <div class="right-content">
+            <div class="about-me-title">
+              <h1>Hello, I Am <span class="primary-text">Bar Golod</span></h1>
+            </div>
+            <br />
+            <div class="paragraph">{{ aboutMeText1 }}</div>
+            <br />
+            <div class="paragraph">{{ aboutMeText2 }}</div>
+            <br />
+            <app-skills></app-skills>
+          </div>
+        </div>
+        <div class="button-container">
+          <button class="button" (click)="downloadCV()">Download CV</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

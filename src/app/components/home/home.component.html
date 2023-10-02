@@ -1,0 +1,27 @@
+<div id="large-header" class="large-header">
+  <app-mouse-tracker></app-mouse-tracker>
+  <img
+    src="/assets/img/bar-background.webp"
+    alt="Portrait Image"
+    class="portrait-image"
+  />
+  <div class="title-wrapper">
+    <div class="main-title">
+      <h1 class="title">BAR<span class="thin"> GOLOD</span></h1>
+    </div>
+    <div class="description-container">
+      <div class="description-content">
+        <div class="static-text">I Am</div>
+        <div class="description-title">
+          <span class="typed-text" #typedTextElement></span>
+        </div>
+      </div>
+
+      <app-social-links></app-social-links>
+
+      <button class="contact-button" (click)="scrollTo('contact')">
+        Hire Me
+      </button>
+    </div>
+  </div>
+</div>

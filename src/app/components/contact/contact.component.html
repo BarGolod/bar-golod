@@ -1,0 +1,53 @@
+<div class="contact">
+  <div class="title-container">
+    <div class="contact-title">
+      <h1>Contact Me</h1>
+    </div>
+    <div class="title-underline"></div>
+  </div>
+  <div class="wrapper">
+    <ng-container class="form-wrapper">
+      <form [formGroup]="contactForm" class="form-group-container">
+        <div class="contact-form">
+          <div *ngFor="let field of formFields">
+            <label class="form-group-wrapper">
+              <h3 class="field-text">{{ field.displayName }}</h3>
+              <input
+                [class.form-input]="true"
+                [formControlName]="field.name"
+                [name]="field.name"
+                [type]="field.type"
+                autocomplete="off"
+              />
+              <div
+                *ngIf="
+                  field.type === 'email' &&
+                  contactForm.get(field.name)?.hasError('email')
+                "
+              >
+                <span class="validation-error">Invalid email address</span>
+              </div>
+            </label>
+          </div>
+          <button
+            [disabled]="contactForm.invalid"
+            type="submit"
+            class="submit-button"
+            (click)="sendMessage()"
+          >
+            Send Message
+          </button>
+          <small class="field-text">* All fields are required</small>
+        </div>
+        <div class="content-icons">
+          <div class="icons" *ngFor="let info of contactInfo">
+            <img [src]="info.iconSrc" [alt]="info.altText" height="60" />
+            <h3 [class]="info.className + ' icon-text'">{{ info.title }}</h3>
+            <p class="icon-text">{{ info.content }}</p>
+          </div>
+        </div>
+      </form>
+    </ng-container>
+  </div>
+  <!-- Add message display here if needed -->
+</div>

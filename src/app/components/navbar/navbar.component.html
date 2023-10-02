@@ -1,0 +1,55 @@
+<div class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <div class="logo">
+        <a [routerLink]="['/home']">BAR <span class="thin">GOLOD</span></a>
+      </div>
+    </div>
+    <div *ngIf="windowWidth > 768" class="navbar-links">
+      <div *ngFor="let link of navbarLinks">
+        <div
+          *ngIf="link.key !== 'contact'"
+          class="navbar-link"
+          (click)="scrollTo(link.id)"
+        >
+          {{ link.name }}
+        </div>
+        <button
+          *ngIf="link.key === 'contact'"
+          class="navbar-link"
+          (click)="scrollTo(link.id)"
+        >
+          {{ link.name }}
+        </button>
+      </div>
+    </div>
+    <div *ngIf="!showMenu" class="hamburger-menu" (click)="toggleMenu()">
+      <div class="hamburger-menu-container">
+        <div class="hamburger-menu-line"></div>
+        <div class="hamburger-menu-line"></div>
+        <div class="hamburger-menu-line"></div>
+      </div>
+    </div>
+    <div [@fadeInOut] *ngIf="showMenu" class="mobile-menu">
+      <div class="close-button" (click)="toggleMenu()">×</div>
+      <div class="mobile-menu-links">
+        <div *ngFor="let link of navbarLinks">
+          <div
+            *ngIf="link.key !== 'contact'"
+            class="navbar-link"
+            (click)="scrollTo(link.id, true)"
+          >
+            {{ link.name }}
+          </div>
+          <button
+            *ngIf="link.key === 'contact'"
+            class="navbar-link"
+            (click)="scrollTo(link.id, true)"
+          >
+            {{ link.name }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

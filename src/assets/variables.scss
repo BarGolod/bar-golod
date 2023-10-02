@@ -1,0 +1,47 @@
+// Colors
+$white: #fff;
+$black: #000;
+$primary: #ffd700;
+$accent: #07163a;
+$accent-dark: #02050f;
+
+// Text Colors
+$text-color: $black;
+$text-color-light: $white;
+$text-color-primary: $primary;
+$text-color-accent: $accent;
+$text-color-accent-dark: $accent-dark;
+
+$success: #28a745;
+$error: #dc3545;
+
+// Backgrounds
+$main-background: radial-gradient(
+  circle 815px at 23.4% -21.8%,
+  rgba(165, 200, 224, 1) 0.2%,
+  // Lighter blue color
+  rgba(7, 22, 58, 1) 100.2% // Dark blue color
+);
+
+$tablet-main-background: radial-gradient(
+  circle 815px at 133.4% -21.8%,
+  rgba(165, 200, 224, 1) 0.2%,
+  // Lighter blue color
+  rgba(7, 22, 58, 1) 100.2% // Dark blue color
+);
+
+$mobile-main-background: radial-gradient(
+  circle 815px at 173.4% -21.8%,
+  rgba(165, 200, 224, 1) 0.2%,
+  // Lighter blue color
+  rgba(7, 22, 58, 1) 100.2% // Dark blue color
+);
+
+$primary-background: #1a191d;
+$container-background: #f2f2f2;
+
+// Layout Breakpoints
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$desktop-large-width: 1200px;

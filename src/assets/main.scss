@@ -1,0 +1,57 @@
+@import "./variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+
+  html {
+    font-size: 14px;
+
+    body {
+      height: 100% !important;
+      width: 100%;
+      font-size: 1rem;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// icons
+.icon {
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+}
+
+.kendo-ui-icon {
+  background-image: url("./icons/kendo-ui.png");
+}
+
+.bitbucket-icon {
+  background-image: url("./icons/bitbucket.png");
+}
+
+.gitlab-icon {
+  background-image: url("./icons/gitlab.png");
+}
+
+.confluence-icon {
+  background-image: url("./icons/confluence.png");
+}
+
+.jira-icon {
+  background-image: url("./icons/jira.png");
+}

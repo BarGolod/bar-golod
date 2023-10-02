@@ -1,0 +1,8 @@
+@import "./../../../assets/main.scss";
+@import "./../../../assets/variables.scss";
+
+@media screen and (max-width: $mobile-width) {
+  #demo-canvas {
+    opacity: 0.1;
+  }
+}

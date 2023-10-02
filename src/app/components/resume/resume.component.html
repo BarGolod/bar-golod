@@ -1,0 +1,24 @@
+<div class="resume">
+  <div class="title-container">
+    <div class="resume-title">
+      <h1>Resume</h1>
+    </div>
+    <div class="title-underline"></div>
+  </div>
+  <div class="timeline">
+    <div class="timeline-line"></div>
+    <div class="timeline-items">
+      <div class="timeline-item" *ngFor="let event of timelineEvents">
+        <div class="timeline-content">
+          <h2>{{ event.year }}</h2>
+          <h3>{{ event.name }}</h3>
+          <p>{{ event.company }}</p>
+          <div [innerHTML]="event.description"></div>
+        </div>
+        <div class="timeline-image">
+          <img class="logo" [src]="event.logo" [alt]="event.company" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

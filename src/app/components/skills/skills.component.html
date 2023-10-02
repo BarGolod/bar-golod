@@ -1,0 +1,12 @@
+<div class="skills">
+  <div class="skills-container">
+    <div class="carousel">
+      <div class="skills-list">
+        <div class="skill" *ngFor="let skill of skills">
+          <i [ngClass]="skill.iconClass" [style.color]="skill.color"></i>
+          <div class="skill-name">{{ skill.name }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
