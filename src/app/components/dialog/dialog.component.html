@@ -1,7 +1,10 @@
-<h2>{{ dialogData.title }}</h2>
-<h3>{{ dialogData.subtitle }}</h3>
-<div class="legal-content" [innerHTML]="dialogData.content"></div>
-
-<div class="dialog-actions">
-  <button mat-button (click)="closeDialog()">Close</button>
+<div class="dialog-container">
+  <div class="dialog-content">
+    <h2>{{ dialogData.title }}</h2>
+    <h3>{{ dialogData.subtitle }}</h3>
+    <div class="content-data">
+      <div [innerHTML]="dialogData.content"></div>
+    </div>
+    <button class="close-button" (click)="closeDialog()">Close</button>
+  </div>
 </div>

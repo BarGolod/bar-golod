@@ -1,15 +1,15 @@
 <div class="social-media-links">
   <ng-container *ngFor="let link of socialLinks">
     <a
-      *ngIf="link.name !== 'Email'; else showAlert"
+      *ngIf="link.name !== 'Email'; else showDialog"
       [href]="link.link"
       class="social-link"
       target="_blank"
     >
       <i [ngClass]="link.iconClass"></i>
     </a>
-    <ng-template #showAlert>
-      <div class="social-link" (click)="showAlertFunction()">
+    <ng-template #showDialog>
+      <div class="social-link" (click)="showDialogFunction()">
         <i [ngClass]="link.iconClass"></i>
       </div>
     </ng-template>

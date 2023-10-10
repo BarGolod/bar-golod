@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DataService } from '../../shared/data-service';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +12,7 @@ export class ContactComponent {
   formFields: any[];
   contactInfo: any[];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private dataService: DataService) {
     this.formFields = [
       { name: 'firstName', type: 'text', displayName: 'First Name' },
       { name: 'lastName', type: 'text', displayName: 'Last Name' },
@@ -67,21 +68,26 @@ export class ContactComponent {
       let valueArray = Object.values(this.contactForm.controls).map(
         (el: any) => el.value
       );
-      const alertText =
-        'Please note that this is a demo, send the following message through your personal mail to my mail: bargolod@gmail.com\n';
+
+      const notification =
+        'Please note that this is a Frontend demo site, without any Backend. </br>' +
+        'Send the following message through your personal mail to my mail: bargolod@gmail.com</br></br>';
+
       const message =
-        'Hi Bar,\n\nThis is ' +
+        'Hi Bar,</br></br>This is ' +
         valueArray[0] +
         ' ' +
         valueArray[1] +
-        '.\n\n' +
+        '.</br></br>' +
         valueArray[3] +
-        '.\n\nPlease response back to ' +
+        '.</br></br>Please response back to ' +
         valueArray[2] +
-        '\n\n' +
+        '</br></br>' +
         'Best Regards, ' +
-        valueArray[0];
-      window.alert(alertText + '\n' + message);
+        valueArray[0] +
+        '</br>';
+
+      this.dataService.showDialogFunction(notification, message);
 
       this.contactForm.reset();
     }

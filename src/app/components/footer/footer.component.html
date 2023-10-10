@@ -10,13 +10,14 @@
             *ngFor="let item of section.items; let itemIndex = index"
           >
             <ng-container *ngIf="item?.routerLink; else noRouterLink">
-              <!-- <a [routerLink]="item?.routerLink">{{ item.text }}</a> -->
               <span (click)="openLegalDialog(item.routerLink)">{{
                 item.text
               }}</span>
             </ng-container>
             <ng-template #noRouterLink>
-              <span (click)="item.action()">{{ item.text }}</span>
+              <span (click)="item.action() ? item.action() : ''">{{
+                item.text
+              }}</span>
             </ng-template>
           </li>
         </ul>

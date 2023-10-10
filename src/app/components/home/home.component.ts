@@ -22,25 +22,12 @@ export class HomeComponent {
 
   constructor(
     private router: Router,
-    private activatedRoute: ActivatedRoute,
     private renderer: Renderer2,
     public dataService: DataService
   ) {}
 
   ngOnInit(): void {
-    this.setupScrollReveal();
-    this.setupHead();
     this.animateDescription();
-  }
-
-  private setupScrollReveal(): void {
-    // Implement ScrollReveal logic using Angular's Renderer2 here if needed.
-    // You may need to import Renderer2 from '@angular/core'.
-  }
-
-  private setupHead(): void {
-    // Implement setting meta tags and viewport here using Angular's Title and Meta services if needed.
-    // You may need to import Title and Meta from '@angular/platform-browser'.
   }
 
   scrollTo(id: string): void {
@@ -78,7 +65,6 @@ export class HomeComponent {
 
     const type = () => {
       if (index < text.length) {
-        // Use Renderer2 to update the element's text content
         this.renderer.setProperty(
           this.typedTextElement?.nativeElement,
           'textContent',
@@ -101,7 +87,6 @@ export class HomeComponent {
 
     const erase = () => {
       if (index > 0) {
-        // Use Renderer2 to update the element's text content
         this.renderer.setProperty(
           this.typedTextElement.nativeElement,
           'textContent',

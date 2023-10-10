@@ -1,4 +1,4 @@
-import { Component, Input, Inject } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -14,16 +14,11 @@ export class DialogComponent {
     content: '',
   };
 
-  // Inject the MAT_DIALOG_DATA token to receive data
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.dialogData = data;
-  }
-
-  openDialog() {
-    this.isOpen = true;
   }
 
   closeDialog() {

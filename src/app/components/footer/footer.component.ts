@@ -1,4 +1,4 @@
-import { Component, NgZone, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../../shared/data-service';
 import { DialogComponent } from '../dialog/dialog.component';
@@ -17,12 +17,11 @@ export class FooterComponent implements OnInit {
   constructor(
     private router: Router,
     private dataService: DataService,
-    private zone: NgZone,
     private dialog: MatDialog
   ) {}
 
   ngOnInit() {
-    this.phoneNumber = '+9750-2102036';
+    this.phoneNumber = '+972 502102036';
     this.email = 'bargolod@gmail.com';
     this.sections = [
       {
@@ -44,14 +43,10 @@ export class FooterComponent implements OnInit {
       },
       {
         title: 'Contact',
-        items: [
-          { text: this.phoneNumber, action: this.callMe, type: 'link' },
-          {
-            text: this.email,
-            action: this.sendEmail,
-            type: 'link',
-          },
-        ],
+        items: [this.phoneNumber, this.email].map((text) => ({
+          text,
+          type: 'text',
+        })),
       },
       {
         title: 'Services',
@@ -96,14 +91,6 @@ export class FooterComponent implements OnInit {
     }
   }
 
-  callMe() {
-    window.open('tel:' + this.phoneNumber);
-  }
-
-  sendEmail() {
-    window.open('mailto:' + this.email);
-  }
-
   getCurrentYear(): number {
     return new Date().getFullYear();
   }
@@ -114,11 +101,10 @@ export class FooterComponent implements OnInit {
 
   openLegalDialog(legalKey: string) {
     const legalText = this.dataService.getLegal(legalKey);
-    this.zone.run(() =>
-      this.dialog.open(DialogComponent, {
-        width: '80%',
-        data: { legalText },
-      })
-    );
+
+    this.dialog.open(DialogComponent, {
+      width: '80%',
+      data: legalText,
+    });
   }
 }

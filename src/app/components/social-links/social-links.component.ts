@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../shared/data-service';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-social-links',
@@ -9,20 +10,22 @@ import { DataService } from '../../shared/data-service';
 export class SocialLinksComponent implements OnInit {
   socialLinks: any[] = [];
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private dialog: MatDialog) {}
 
   ngOnInit() {
     this.socialLinks = this.dataService.getSocialLinks();
   }
 
-  public showAlertFunction() {
-    const alertText =
-      'Please note that this is a demo, send the following message through your personal mail to my mail: bargolod@gmail.com\n';
+  public showDialogFunction() {
+    const notification =
+      'Please note that this is a Frontend demo site, without any Backend. </br>' +
+      'Send the following message through your personal mail to my mail: bargolod@gmail.com</br></br>';
     const message =
-      'Hi Bar,\n\nThis is ' +
-      'XXX.\n\n' +
-      'Your message\n\n' +
+      'Hi Bar,</br></br>This is ' +
+      'XXX.</br></br>' +
+      '- Your message -</br></br>' +
       'Best Regards, XXX';
-    window.alert(alertText + '\n' + message);
+
+    this.dataService.showDialogFunction(notification, message);
   }
 }
