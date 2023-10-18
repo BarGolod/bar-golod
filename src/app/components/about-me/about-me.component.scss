@@ -186,5 +186,13 @@
         font-size: 0.6rem !important;
       }
     }
+
+    .left-content {
+      display: none;
+    }
+
+    .right-content {
+      width: 250px !important;
+    }
   }
 }
