@@ -50,11 +50,11 @@ export class DataService {
       iconClass: 'fab fa-github',
       link: 'https://github.com/bargolod',
     },
-    {
-      name: 'Email',
-      iconClass: 'fas fa-envelope',
-      link: '',
-    },
+    // {
+    //   name: 'Email',
+    //   iconClass: 'fas fa-envelope',
+    //   link: '',
+    // },
   ];
 
   private skills: any = [

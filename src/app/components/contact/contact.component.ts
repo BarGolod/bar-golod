@@ -38,21 +38,21 @@ export class ContactComponent {
 
     this.contactInfo = [
       {
-        iconSrc: 'https://i.postimg.cc/KvYH1Qmr/2.webp',
+        iconSrc: '/assets/icons/contact-email.svg',
         altText: 'my email',
         title: 'Email',
         content: 'bargolod@gmail.com',
         className: 'contactEmail',
       },
       {
-        iconSrc: 'https://i.postimg.cc/P5pV4xpC/3.webp',
+        iconSrc: '/assets/icons/contact-phone.png',
         altText: 'my number',
         title: 'Phone Number',
         content: '+972 502102036',
         className: 'contactPhone',
       },
       {
-        iconSrc: 'https://i.postimg.cc/vBMPbtPn/1.webp',
+        iconSrc: '/assets/icons/contact-address.svg',
         altText: 'my address',
         title: 'Address',
         content: 'Givatayim',

@@ -8,7 +8,7 @@
   <div class="wrapper">
     <ng-container class="form-wrapper">
       <form [formGroup]="contactForm" class="form-group-container">
-        <div class="contact-form">
+        <!-- <div class="contact-form">
           <div *ngFor="let field of formFields">
             <label class="form-group-wrapper">
               <h3 class="field-text">{{ field.displayName }}</h3>
@@ -38,7 +38,7 @@
             Send Message
           </button>
           <small class="field-text">* All fields are required</small>
-        </div>
+        </div> -->
         <div class="content-icons">
           <div class="icons" *ngFor="let info of contactInfo">
             <img [src]="info.iconSrc" [alt]="info.altText" height="60" />
