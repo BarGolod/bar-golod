@@ -2,6 +2,11 @@
 @import "./../../../assets/variables.scss";
 
 @media screen and (max-width: $mobile-width) {
+  .mouse-tracker {
+    display: block;
+    max-height: 350px;
+  }
+
   #demo-canvas {
     opacity: 0.1;
   }
