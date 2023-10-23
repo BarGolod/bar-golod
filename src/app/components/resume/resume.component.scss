@@ -127,3 +127,28 @@
     width: 100% !important;
   }
 }
+
+@media screen and (max-width: $mobile-width) {
+  .title-container {
+    width: 100% !important;
+  }
+
+  .timeline-content,
+  .timeline-image {
+    h2 {
+      font-size: 18px !important;
+    }
+
+    h3 {
+      font-size: 16px !important;
+    }
+
+    p {
+      font-size: 14px !important;
+    }
+
+    div {
+      font-size: 12px !important;
+    }
+  }
+}
