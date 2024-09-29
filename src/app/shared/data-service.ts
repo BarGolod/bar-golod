@@ -78,14 +78,27 @@ export class DataService {
 
   private resume: any = [
     {
+      name: 'Senior Frontend Developer',
+      company: 'Colmex Group',
+      description: `
+      <ul>
+        <li>Developing a private zone for users with <strong>Angular 17</strong>, enhancing UX and functionality</li>
+        <li>Rebranding the Colmex IL site using WordPress's DIVI plugin and <strong>PHP</strong> templates</li>
+        <li>Leading new feature development for Colmex Pro and Colmex IL, efficiently managing work across both platforms</li>
+        <li>Mentoring a junior developer, conducting code reviews, and overseeing version uploads</li>
+      </ul>`,
+      year: '2023 - Present',
+      logo: 'assets/icons/colmex-logo.png',
+    },
+    {
       name: 'Frontend Developer',
       company: 'Modelity Technologies',
       description: `
       <ul>
-        <li>Develop and implement the UI of several financial advisory technologies using <strong>Angular 13</strong>.</li>
-        <li>Integrate client-server features with the backend team in Agile methodology.</li>
-        <li>Lead cross-company processes and projects with backend developers, UX/UI designers, and QA engineers.</li>
-        <li>Perform QA testing to ensure seamless functionality and optimal user resume.</li>
+        <li>Develop and implement the UI of several financial advisory technologies using <strong>Angular 13</strong></li>
+        <li>Integrate client-server features with the backend team in Agile methodology</li>
+        <li>Lead cross-company processes and projects with backend developers, UX/UI designers, and QA engineers</li>
+        <li>Perform QA testing to ensure seamless functionality and optimal user resume</li>
       </ul>`,
       year: '2020 - 2023',
       logo: 'assets/icons/modelity-technologies-logo.png',
@@ -95,9 +108,9 @@ export class DataService {
       company: 'Modelity Technologies',
       description: `
       <ul>
-        <li>Monitor large computer networks and server issues as part of the Production team.</li>
-        <li>Perform troubleshooting and update relevant databases.</li>
-        <li>Collect and analyze data in real-time to ensure the stability of automated processes.</li>
+        <li>Monitor large computer networks and server issues as part of the Production team</li>
+        <li>Perform troubleshooting and update relevant databases</li>
+        <li>Collect and analyze data in real-time to ensure the stability of automated processes</li>
       </ul>`,
       year: '2018 - 2020',
       logo: 'assets/icons/modelity-technologies-logo.png',
@@ -107,10 +120,10 @@ export class DataService {
       company: 'ZotaPay Payments',
       description: `
       <ul>
-        <li>Support customers through various outlets including MT4 CRM.</li>
-        <li>Configure secured payment environments via dedicated API.</li>
-        <li>Prevent Chargebacks & Frauds cases as part of the Risk Team.</li>
-        <li>Integrate end-user accounts all across the world, mainly in China & South East-Asia.</li>
+        <li>Support customers through various outlets including MT4 CRM</li>
+        <li>Configure secured payment environments via dedicated API</li>
+        <li>Prevent Chargebacks & Frauds cases as part of the Risk Team</li>
+        <li>Integrate end-user accounts all across the world, mainly in China & South East-Asia</li>
       </ul>`,
       year: '2017 - 2018',
       logo: 'assets/icons/zotapay-logo.png',
