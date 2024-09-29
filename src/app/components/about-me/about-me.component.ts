@@ -19,7 +19,7 @@ export class AboutMeComponent implements OnInit {
 
   downloadCV(): void {
     window.open(
-      'https://drive.google.com/file/d/15wM2LdWisvS2TF4zkIzP6GGRyQOGbuEn/view?usp=sharing',
+      'https://drive.google.com/file/d/1zucitJ7hcaTs71IH3SkWeEOEmBZ6ElLc/view?usp=sharing',
       '_blank'
     );
   }
